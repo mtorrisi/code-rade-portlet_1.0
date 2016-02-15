@@ -39,22 +39,12 @@
 		<tei-class>com.liferay.taglib.portlet.ActionURLTei</tei-class>
 		<body-content>JSP</body-content>
 		<attribute>
-			<name>allowEmptyParam</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
 			<name>anchor</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
 		<attribute>
 			<name>copyCurrentRenderParameters</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<name>doAsGroupId</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -95,11 +85,6 @@
 		</attribute>
 		<attribute>
 			<name>portletName</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<name>refererPlid</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -207,7 +192,7 @@
 	<tag>
 		<name>param</name>
 		<tag-class>com.liferay.taglib.util.ParamTag</tag-class>
-		<body-content>empty</body-content>
+		<body-content>JSP</body-content>
 		<attribute>
 			<name>name</name>
 			<required>true</required>
@@ -277,22 +262,12 @@
 		<tei-class>com.liferay.taglib.portlet.RenderURLTei</tei-class>
 		<body-content>JSP</body-content>
 		<attribute>
-			<name>allowEmptyParam</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
 			<name>anchor</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
 		<attribute>
 			<name>copyCurrentRenderParameters</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<name>doAsGroupId</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -328,11 +303,6 @@
 		</attribute>
 		<attribute>
 			<name>portletName</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<name>refererPlid</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -410,11 +380,6 @@
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
 		<attribute>
-			<name>doAsGroupId</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
 			<name>doAsUserId</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
@@ -451,11 +416,6 @@
 		</attribute>
 		<attribute>
 			<name>portletName</name>
-			<required>false</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<name>refererPlid</name>
 			<required>false</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>

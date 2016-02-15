@@ -1,34 +1,145 @@
 <?xml version="1.0"?>
 
-<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
-	<portlet>
-		<portlet-name>code-rade</portlet-name>
-		<display-name>CODE_RADE portlet</display-name>
-		<portlet-class>com.liferay.util.bridges.mvc.MVCPortlet</portlet-class>
-		<init-param>
-			<name>view-template</name>
-			<value>/view.jsp</value>
-		</init-param>
-		<expiration-cache>0</expiration-cache>
-		<supports>
-			<mime-type>text/html</mime-type>
-		</supports>
-		<portlet-info>
-			<title>CODE_RADE portlet</title>
-			<short-title>CODE_RADE portlet</short-title>
-			<keywords>CODE_RADE portlet</keywords>
-		</portlet-info>
-		<security-role-ref>
-			<role-name>administrator</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>guest</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>power-user</role-name>
-		</security-role-ref>
-		<security-role-ref>
-			<role-name>user</role-name>
-		</security-role-ref>
-	</portlet>
+<portlet-app
+    version="2.0"
+    xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+>
+    <portlet>
+        <portlet-name>code-rade-portlet</portlet-name>
+        <display-name>code-rade-portlet</display-name>
+        <portlet-class>it.infn.ct.code_rade_portlet</portlet-class>
+        <!--
+             Application init parameters
+        -->
+        <init-param>
+            <name>gridOperationDesc</name>
+            <value>code-rade description</value>
+        </init-param>
+        <init-param>
+            <name>portletVersion</name>
+            <value>1.0</value>
+        </init-param>
+        <init-param>
+            <name>logLevel</name>
+            <value>info</value>
+        </init-param>
+        <init-param>
+            <name>gridOperationId</name>
+            <value>11</value>
+        </init-param>
+        <!--
+             Infrastructure parameters can be specified prefixing
+             the name with the infrastructure number: n_<property>
+        -->
+        <init-param>
+            <name>numInfrastructures</name>
+            <value>1</value>
+        </init-param>
+        <!--
+             Infrastructure #1
+        -->
+
+        <init-param>
+            <name>1_nameInfrastructure</name>
+            <value>DFA UNICT</value>
+        </init-param>
+        <init-param>             
+            <name>1_acronymInfrastructure</name>
+            <value>ssh</value>
+        </init-param>
+        <init-param>    
+            <name>1_bdiiHost</name>
+            <value>cvmfs</value>
+        </init-param>
+        <init-param>
+            <name>1_enableInfrastructure</name>
+            <value>yes</value>
+        </init-param>
+        <init-param>    
+            <name>1_wmsHosts</name>
+            <value>ssh://151.97.41.78</value>
+        </init-param>
+        <init-param>
+            <name>1_pxServerHost</name>
+            <value></value>
+        </init-param>
+        <init-param>
+            <name>1_pxServerPort</name>
+            <value></value>
+        </init-param>
+        <init-param>
+            <name>1_pxServerSecure</name>
+            <value></value>
+        </init-param>
+        <init-param>
+            <name>1_pxRobotId</name>
+            <value></value>
+        </init-param>
+        <init-param>
+            <name>1_pxRobotVO</name>
+            <value></value>
+        </init-param>
+        <init-param>
+            <name>1_pxRobotRole</name>
+            <value></value>
+        </init-param>
+        <init-param>
+            <name>1_pxRobotRenewalFlag</name>
+            <value></value>
+        </init-param>
+        <init-param>
+            <name>1_softwareTags</name>
+            <value></value>
+        </init-param>
+        <init-param>
+            <name>sciGwyUserTrackingDB_Hostname</name>
+            <value>localhost</value>
+        </init-param>
+        <init-param>
+            <name>sciGwyUserTrackingDB_Username</name>
+            <value>tracking_user</value>
+        </init-param>
+        <init-param>
+            <name>sciGwyUserTrackingDB_Password</name>
+            <value>usertracking</value>
+        </init-param>
+        <init-param>
+            <name>sciGwyUserTrackingDB_Database</name>
+            <value>userstracking</value>
+        </init-param>
+        <init-param>    
+            <name>jobRequirements</name>
+            <value></value>
+        </init-param>            
+        <init-param>    
+            <name>pilotScript</name>
+            <value>pilot_script.sh</value>
+        </init-param>
+        <expiration-cache>0</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+            <portlet-mode>edit</portlet-mode>
+            <portlet-mode>help</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>code-rade-portlet</title>
+            <short-title>code-rade-portlet</short-title>
+            <keywords>code-rade-portlet</keywords>
+        </portlet-info>
+        <security-role-ref>
+            <role-name>administrator</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>guest</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>power-user</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>user</role-name>
+        </security-role-ref>
+    </portlet>
 </portlet-app>
